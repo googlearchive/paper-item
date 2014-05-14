@@ -26,6 +26,7 @@ Example:
 
 <link href="../polymer/polymer.html" rel="import">
 <link href="../core-icon/core-icon.html" rel="import">
+<link href="../core-layout/core-layout.html" rel="import">
 <link href="../paper-ripple/paper-ripple.html" rel="import">
 
 <polymer-element name="paper-item" attributes="label iconSrc icon">
@@ -34,10 +35,12 @@ Example:
 
     <link href="paper-item.css" rel="stylesheet">
 
+    <core-layout align="center"></core-layout>
+
     <paper-ripple id="ripple"></paper-ripple>
 
-    <core-icon id="icon" src="{{iconSrc}}" icon="{{icon}}"></core-icon>
-    <span id="label">{{label}}</span>
+    <core-icon id="icon" hidden?="{{!iconSrc && !icon}}" src="{{iconSrc}}" icon="{{icon}}"></core-icon>
+    {{label}}
 
   </template>
 
