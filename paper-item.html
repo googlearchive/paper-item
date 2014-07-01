@@ -34,15 +34,30 @@ Example:
 
     <link href="paper-item.css" rel="stylesheet">
 
-    <paper-ripple id="ripple"></paper-ripple>
-
     <core-icon id="icon" hidden?="{{!iconSrc && !icon}}" src="{{iconSrc}}" icon="{{icon}}"></core-icon>
     {{label}}
     <content></content>
+
+    <paper-ripple id="ripple"></paper-ripple>
   </template>
 
   <script>
     Polymer('paper-item', {
+        
+      domReady: function () {
+        var that = this;
+        this.$.ripple.addEventListener('click', function (e) {
+          var link = that.querySelector('::content a');
+
+          if (link) {
+            var evt = document.createEvent('MouseEvents');
+            evt.initMouseEvent('click', e.bubbles, e.cancelable, e.view,
+                e.detail, e.screenX, e.screenY, e.clientX, e.clientY, e.ctrlKey,
+                e.altKey, e.shiftKey, e.metaKey, e.button, link);
+            link.dispatchEvent(evt, true);
+          }
+        });
+      },
 
       publish: {
 
