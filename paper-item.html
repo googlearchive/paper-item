@@ -53,7 +53,7 @@ Example:
             var evt = document.createEvent('MouseEvents');
             evt.initMouseEvent('click', e.bubbles, e.cancelable, e.view,
                 e.detail, e.screenX, e.screenY, e.clientX, e.clientY, e.ctrlKey,
-                e.altKey, e.shiftKey, e.metaKey, e.button, link);
+                e.altKey, e.shiftKey, e.metaKey, e.button, null);
             link.dispatchEvent(evt, true);
           }
         });
