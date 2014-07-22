@@ -14,8 +14,17 @@ html /deep/ paper-item::shadow #ripple {
   left: 0;
   bottom: 0;
   right: 0;
+  pointer-events: none;
 }
 
 html /deep/ paper-item::shadow #icon {
   margin-right: 8px;
+}
+
+html /deep/ paper-item::shadow ::content > a {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
 }
