@@ -6,6 +6,7 @@ html /deep/ paper-item {
   cursor: pointer;
   height: 36px;
   padding: 0 12px;
+  white-space: nowrap;
 }
 
 html /deep/ paper-item::shadow #ripple {
