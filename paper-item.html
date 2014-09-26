@@ -38,11 +38,11 @@ Example:
 
 <link href="paper-item.css" rel="stylesheet" shim-shadowdom>
 
-<polymer-element name="paper-item" attributes="label iconSrc icon" center horizontal layout>
+<polymer-element name="paper-item" attributes="label iconSrc icon waveColor" center horizontal layout>
 
   <template>
 
-    <paper-ripple id="ripple"></paper-ripple>
+    <paper-ripple style="color: {{waveColor}};" id="ripple"></paper-ripple>
 
     <core-icon id="icon" hidden?="{{!iconSrc && !icon}}" src="{{iconSrc}}" icon="{{icon}}"></core-icon>
     <div id="label">{{label}}</div>
