@@ -4,6 +4,11 @@
   "dependencies": {
     "polymer": "Polymer/polymer#master",
     "core-icon": "Polymer/core-icon#master",
-    "paper-ripple": "Polymer/paper-ripple#master"
+    "core-icons": "Polymer/core-icons#master",
+    "core-selector": "Polymer/core-selector#master",
+    "font-roboto": "Polymer/font-roboto#master",
+    "paper-button": "Polymer/paper-button#master",
+    "paper-ripple": "Polymer/paper-ripple#master",
+    "paper-shadow": "Polymer/paper-shadow#master"
   }
 }
