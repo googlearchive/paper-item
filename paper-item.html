@@ -67,7 +67,7 @@ Example:
       }
 
       :host([disabled]) {
-        color: #a8a8a8;
+        color: rgba(0, 0, 0, 0.26);
         cursor: auto;
         pointer-events: none;
       }
@@ -83,6 +83,16 @@ Example:
 
       .button-content {
         padding: 0.9em 1em;
+      }
+
+      polyfill-next-selector { content: '.button-content core-icon'; }
+      ::content core-icon {
+        color: rgba(0, 0, 0, 0.54);
+      }
+
+      polyfill-next-selector { content: ':host([disabled]) .button-content core-icon'; }
+      :host([disabled]) ::content core-icon {
+        color: rgba(0, 0, 0, 0.26);
       }
 
       polyfill-next-selector { content: '.button-content > a'; }
