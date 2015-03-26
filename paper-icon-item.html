@@ -12,16 +12,19 @@
 <link rel="import" href="../layout/layout.html">
 
 <!--
-`paper-item` is a list item.
+`paper-icon-item` is a list item with a fixed-width icon area.
 
-@element paper-item
+@element paper-icon-item
 -->
 
-<dom-module id="paper-item">
+<dom-module id="paper-icon-item">
 
   <link rel="import" type="css" href="paper-item-shared.css">
 
   <template>
+    <div id="contentIcon" class="content-icon layout horizontal center">
+      <content select="[item-icon]"></content>
+    </div>
     <content></content>
   </template>
 
@@ -33,10 +36,30 @@
 
   Polymer({
 
-    is: 'paper-item',
+    is: 'paper-icon-item',
 
     hostAttributes: {
-      'class': 'layout horizontal center'
+      'class': 'layout horizontal center paper-font-subhead'
+    },
+
+    properties: {
+
+      /**
+       * The width of the icon area.
+       *
+       * @attribute iconWidth
+       * @type String
+       * @default '56px'
+       */
+      iconWidth: {
+        type: String,
+        value: '56px'
+      }
+
+    },
+
+    ready: function() {
+      this.$.contentIcon.style.width = this.iconWidth;
     }
 
   });
