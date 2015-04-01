@@ -9,17 +9,44 @@
 -->
 
 <link rel="import" href="../polymer/polymer.html">
-<link rel="import" href="../layout/layout.html">
 
 <!--
-`paper-item` is a list item.
 
-@element paper-item
+@element paper-item-body
 -->
 
-<dom-module id="paper-item">
+<dom-module id="paper-item-body">
 
-  <link rel="import" type="css" href="paper-item-shared.css">
+  <style>
+
+    :host {
+      display: block;
+    }
+
+    :host([two-line]) {
+      min-height: 72px;
+    }
+
+    :host([three-line]) {
+      min-height: 88px;
+    }
+
+    :host > ::content > * {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    :host > ::content [secondary] {
+      opacity: 0.54;
+      /* .paper-font-body1 */
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 20px;
+    }
+
+
+  </style>
 
   <template>
     <content></content>
@@ -33,10 +60,10 @@
 
   Polymer({
 
-    is: 'paper-item',
+    is: 'paper-item-body',
 
     hostAttributes: {
-      'class': 'layout horizontal center'
+      'class': 'flex layout vertical center-justified'
     }
 
   });

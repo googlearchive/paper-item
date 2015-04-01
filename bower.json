@@ -1,14 +1,31 @@
 {
   "name": "paper-item",
+  "version": "0.0.1",
+  "authors": [
+    "Yvonne Yip <ykyyip@google.com>"
+  ],
+  "keywords": [
+    "web-components",
+    "web-component",
+    "polymer"
+  ],
+  "main": "index.html",
   "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/Polymer/paper-item"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/Polymer/paper-item",
+  "ignore": [
+  ],
   "dependencies": {
-    "polymer": "Polymer/polymer#master",
-    "core-icon": "Polymer/core-icon#master",
-    "core-icons": "Polymer/core-icons#master",
-    "core-selector": "Polymer/core-selector#master",
-    "font-roboto": "Polymer/font-roboto#master",
-    "paper-button": "Polymer/paper-button#master",
-    "paper-ripple": "Polymer/paper-ripple#master",
-    "paper-shadow": "Polymer/paper-shadow#master"
+    "polymer": "Polymer/polymer#0.8-preview",
+    "layout": "Polymer/layout#0.8-preview",
+  },
+  "devDependencies": {
+    "webcomponentsjs": "Polymer/webcomponentsjs#master",
+    "core-icon": "Polymer/core-icon#0.8-preview",
+    "core-icons": "Polymer/core-icons#0.8-preview",
   }
 }
